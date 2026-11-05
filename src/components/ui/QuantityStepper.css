@@ -1,0 +1,43 @@
+.stepper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px;
+  padding: 3px;
+  background: var(--orange-50);
+  border: 1.5px solid var(--orange-200);
+  border-radius: 999px;
+}
+
+.stepper--block {
+  display: flex;
+  width: 100%;
+}
+
+.stepper__btn {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #fff;
+  color: var(--orange-700);
+  box-shadow: var(--shadow-sm);
+  transition: background 0.15s, color 0.15s, transform 0.15s;
+}
+
+.stepper__btn:hover {
+  background: var(--orange-600);
+  color: #fff;
+}
+
+.stepper__btn:active {
+  transform: scale(0.9);
+}
+
+.stepper__value {
+  min-width: 30px;
+  text-align: center;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+}

@@ -1,0 +1,136 @@
+.menu__toolbar {
+  display: grid;
+  gap: 12px;
+}
+
+.menu__section {
+  display: grid;
+  gap: 14px;
+  scroll-margin-top: 90px;
+}
+
+/* ---------- Busca ---------- */
+.search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 18px;
+  min-height: 52px;
+  border-radius: 999px;
+  background: #fff;
+  border: 1.5px solid var(--line);
+  box-shadow: var(--shadow-sm);
+  color: var(--muted);
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.search:focus-within {
+  border-color: var(--orange-500);
+  box-shadow: 0 0 0 4px rgba(255, 122, 26, 0.16);
+  color: var(--orange-600);
+}
+
+.search__input {
+  flex: 1;
+  min-width: 0;
+  height: 100%;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: var(--ink);
+}
+
+.search__input::placeholder {
+  color: var(--muted);
+}
+
+/* ---------- Filtros ---------- */
+.chips {
+  display: flex;
+  gap: 8px;
+  padding-bottom: 4px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.chips::-webkit-scrollbar {
+  display: none;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: #fff;
+  border: 1.5px solid var(--line);
+  font-weight: 700;
+  font-size: 0.92rem;
+  color: var(--ink-soft);
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+
+.chip:hover {
+  border-color: var(--orange-200);
+}
+
+.chip--active {
+  background: var(--orange-600);
+  border-color: var(--orange-600);
+  color: #fff;
+  box-shadow: 0 6px 14px rgba(232, 93, 4, 0.28);
+}
+
+/* ---------- Barra do carrinho ---------- */
+.cart-bar {
+  position: fixed;
+  left: 16px;
+  right: 16px;
+  bottom: calc(82px + env(safe-area-inset-bottom));
+  z-index: 35;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 20px;
+  border-radius: 999px;
+  background: var(--ink);
+  color: #fff;
+  font-weight: 700;
+  box-shadow: 0 14px 30px rgba(42, 26, 15, 0.35);
+  animation: cart-bar-in 0.3s ease both;
+}
+
+.cart-bar__left,
+.cart-bar__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cart-bar__cta {
+  color: var(--orange-400);
+}
+
+@keyframes cart-bar-in {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (min-width: 720px) {
+  .cart-bar {
+    left: 50%;
+    right: auto;
+    bottom: 28px;
+    width: min(520px, calc(100% - 32px));
+    translate: -50% 0;
+  }
+}

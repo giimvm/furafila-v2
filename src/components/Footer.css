@@ -1,0 +1,37 @@
+.footer {
+  display: none;
+  padding-block: 24px;
+  border-top: 1px solid var(--line);
+  color: var(--ink-soft);
+  font-size: 0.88rem;
+}
+
+.footer__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.footer__brand,
+.footer__actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer__reset {
+  font-weight: 700;
+  color: var(--orange-700);
+}
+
+.footer__reset:hover {
+  text-decoration: underline;
+}
+
+@media (min-width: 720px) {
+  .footer {
+    display: block;
+  }
+}

@@ -1,0 +1,36 @@
+.price-breakdown {
+  display: grid;
+  gap: 10px;
+  padding-top: 14px;
+  border-top: 1px dashed var(--line);
+}
+
+.price-breakdown__row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  color: var(--ink-soft);
+}
+
+.price-breakdown__row dd {
+  font-weight: 700;
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+}
+
+.price-breakdown__free {
+  color: var(--green-700) !important;
+}
+
+.price-breakdown__row--total {
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--ink);
+}
+
+.price-breakdown__row--total dd {
+  font-size: 1.4rem;
+  color: var(--orange-700);
+}

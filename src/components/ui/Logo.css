@@ -1,0 +1,22 @@
+.logo {
+  position: relative;
+  display: inline-grid;
+  place-items: center;
+  width: var(--logo-size, 40px);
+  height: var(--logo-size, 40px);
+  border-radius: 32%;
+  color: #fff;
+  background: linear-gradient(140deg, #ffa24a, #e85d04);
+  box-shadow: 0 6px 14px rgba(232, 93, 4, 0.35);
+}
+
+.logo__dot {
+  position: absolute;
+  top: -3px;
+  right: -3px;
+  width: 28%;
+  height: 28%;
+  border-radius: 50%;
+  background: #ffd23f;
+  border: 2px solid var(--bg);
+}
